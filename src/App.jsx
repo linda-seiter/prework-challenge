@@ -1,23 +1,9 @@
-//import { Sandpack } from "@codesandbox/sandpack-react";
-import {
-  SandpackProvider,
-  SandpackLayout,
-  SandpackTests,
-  SandpackCodeEditor,
-  SandpackConsole,
-} from "@codesandbox/sandpack-react";
+import React from "react";
+import { RouterProvider } from "react-router-dom";
+import { router } from "./routes";
 
-function App() {
-  //return <Sandpack />;
-  return (
-    <SandpackProvider>
-      <SandpackLayout>
-        <SandpackCodeEditor showLineNumbers showTabs />
-        <SandpackTests />
-        <SandpackConsole resetOnPreviewRestart="true" />
-      </SandpackLayout>
-    </SandpackProvider>
-  );
-}
+const App = () => {
+  return <RouterProvider router={router} />;
+};
 
 export default App;
